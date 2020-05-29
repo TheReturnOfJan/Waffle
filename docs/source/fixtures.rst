@@ -14,7 +14,7 @@ Example:
   import BasicTokenMock from './build/BasicTokenMock';
 
   describe('Fixtures', () => {
-    async function fixture([wallet, other], provider) {
+    async function fixture(provider, [wallet, other]) {
       const token = await deployContract(wallet, BasicTokenMock, [
         wallet.address, 1000
       ]);
